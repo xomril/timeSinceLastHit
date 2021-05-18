@@ -62,7 +62,6 @@ const getAlerts = () => {
         const rawData = res.data;
         let cities = {}
         for(let i=0; i< rawData.length; i++){
-            console.log(rawData[i].data)
             if(cities[rawData[i].data] == null){
                 cities[rawData[i].data] = {
                     count:1,
@@ -77,10 +76,12 @@ const getAlerts = () => {
                 }
             }
         }
-        console.log(cities)
         citis_obj = cities;
+        console.log('Cities fully loaded')
         // let data = JSON.stringify(cities);
         // fs.writeFileSync('cities.json', data);
+    }).catch((e)=>{
+        console.log(`Error: ${e}`)
     })
 }
 
