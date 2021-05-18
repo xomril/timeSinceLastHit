@@ -1,6 +1,4 @@
 const express = require('express');
-const request = require('request');
-const fs = require('fs');
 const axios = require('axios').default;
 const path = require('path')
 const app = express()
